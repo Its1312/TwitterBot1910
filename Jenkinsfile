@@ -2,10 +2,14 @@ pipeline {
 
     agent any
 
+    tools {
+        gradle 'gradle'
+    }
+
     stages {
         stage('build') {
             steps {
-                sh './gradlew'
+                sh 'gradle build'
             }
         }
     }
